@@ -9,6 +9,9 @@
 # production
 /build
 
+# next file
+.next
+
 # backup
 /.history
 
