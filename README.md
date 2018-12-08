@@ -10,7 +10,7 @@
 - [x] Pages in NextJS
 - [x] Links and Navigation
 - [x] Shared Components
-- [ ] Dynamic Pages
+- [x] Dynamic Pages
 - [ ] Pretty URLs
 - [ ] Styles on NextJS
 
