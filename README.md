@@ -6,9 +6,9 @@
 - [x] Introduction to NextJS
 - [x] Difference between NextJS and CRA
 - [x] What is SSR and why do we need it
-- [ ] Creating a NextJS App
-- [ ] Pages in NextJS
-- [ ] Links and Navigation
+- [x] Creating a NextJS App
+- [x] Pages in NextJS
+- [x] Links and Navigation
 - [ ] Shared Components
 - [ ] Dynamic Pages
 - [ ] Pretty URLs
