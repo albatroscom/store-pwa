@@ -1,8 +1,7 @@
 import Head from "next/head";
-import withLayout from "../lib/withLayout";
 import PostLink from "../components/PostLink";
 
-const Index = () => (
+export default () => (
     <div>
         <Head>
             <title>Home | Nomad Store</title>
@@ -10,15 +9,11 @@ const Index = () => (
         <h1>Posts:</h1>
         <ul>
             <li>
-                <PostLink title={"showmethe777"} />
+                <PostLink title={"showmethe777"} id={0} />
             </li>
             <li>
-                <PostLink title={"It's the live"} /> 
+                <PostLink title={"It's the live"} id={1} /> 
             </li>
         </ul>
-
-
     </div>
 );
-
-export default withLayout(Index);

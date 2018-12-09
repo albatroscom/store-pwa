@@ -16,7 +16,7 @@
 
 # NextJS Practice Project
 
-- [ ] Defining the Pages
-- [ ] Custom App Component
+- [x] Defining the Pages
+- [x] Custom App Component
 - [ ] Custom Document Component
 - [ ] Fetching Data with NextJS
