@@ -18,5 +18,5 @@
 
 - [x] Defining the Pages
 - [x] Custom App Component
-- [ ] Custom Document Component
+- [x] Custom Document Component
 - [ ] Fetching Data with NextJS
