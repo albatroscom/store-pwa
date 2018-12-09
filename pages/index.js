@@ -22,10 +22,10 @@ export default class extends React.Component {
             <Head>
                 <title>Home | Nomad Store</title>
             </Head>
-            <h1>Posts:</h1>
+            <h1>Movies:</h1>
             <ul>
                 {movies.map(movie => (
-                    <li>
+                    <li key={movie.id}> 
                         <PostLink title={movie.title} id={movie.id} /> 
                     </li>  
                 ))}
