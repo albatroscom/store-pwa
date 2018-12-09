@@ -1,9 +1,22 @@
 import Head from "next/head";
 import PostLink from "../components/PostLink";
+import Axios from "axios";
 
 // export default () => (
 export default class extends React.Component {
+    static async getInitialProps(){
+        const {
+            data: {
+                data: { movies }
+            }
+        } = await Axios.get('https://yts.am/api/v2/list_movies.json');
+
+        return {
+            movies
+        };
+    }
     render() {
+        const { movies } = this.props;
         return (
             <div>
             <Head>
@@ -11,12 +24,11 @@ export default class extends React.Component {
             </Head>
             <h1>Posts:</h1>
             <ul>
-                <li>
-                    <PostLink title={"showmethe777"} id={0} />
-                </li>
-                <li>
-                    <PostLink title={"It's the live"} id={1} /> 
-                </li>
+                {movies.map(movie => (
+                    <li>
+                        <PostLink title={movie.title} id={movie.id} /> 
+                    </li>  
+                ))}
             </ul>
         </div>
         )
