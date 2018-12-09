@@ -1,14 +1,21 @@
 import Head from 'next/head';
 import { withRouter } from 'next/router';
 
-const Post = props => (
+const Movie = props => (
     <div>
         <Head>
             <title>{props.router.query.title} | Nomad Store</title>
         </Head>
-        <h1>{props.router.query.title}</h1>
-        <p>{JSON.stringify(props)}</p>
+        <h1>{props.title}</h1>
+        <p>this is movie page</p>
     </div>
 );
 
-export default withRouter(Post);
+Movie.getInitialProps = async() => {
+    // call the api
+    // parse the result
+    // return result
+    return { title: "this is movie get Initial Props" };
+}
+
+export default withRouter(Movie);
