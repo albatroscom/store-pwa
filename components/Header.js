@@ -1,7 +1,11 @@
 import Link from 'next/link';
 
+const headerStyles = {
+    backgroundColor: 'yellow'
+}
+
 export default () => (
-    <header>
+    <header style={headerStyles}>
         <nav>
             <ul>
                 <li>

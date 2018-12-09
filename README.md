@@ -12,7 +12,7 @@
 - [x] Shared Components
 - [x] Dynamic Pages
 - [x] Pretty URLs
-- [ ] Styles on NextJS
+- [x] Styles on NextJS
 
 # NextJS Practice Project
 
