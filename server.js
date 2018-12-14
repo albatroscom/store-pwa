@@ -10,9 +10,9 @@ app
 .then(()=>{
     const server = express();
 
-    server.get('/movie/:id', (req, res) => {
-        const actualPage = "/post";
-        const queryParams = { id: req.params.id }; // /post:title and req.params.title 서로 동일한 값이어야함
+    server.get('/category/:name', (req, res) => {
+        const actualPage = "/category";
+        const queryParams = { name: req.params.name }; // /post:title and req.params.title 서로 동일한 값이어야함
         app.render(req, res, actualPage, queryParams);
     });
 

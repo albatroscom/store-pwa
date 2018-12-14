@@ -6,11 +6,16 @@
   "author": "albatroscom <albatroscom@naver.com>",
   "license": "MIT",
   "dependencies": {
+    "antd": "3.8.1",
+    "apollo-boost": "^0.1.22",
     "express": "^4.16.4",
     "fetch": "^1.1.0",
+    "graphql": "^14.0.2",
     "isomorphic": "^0.0.11",
     "next": "^7.0.2",
+    "next-with-apollo": "^3.3.0",
     "react": "^16.6.3",
+    "react-apollo": "^2.3.2",
     "react-dom": "^16.6.3"
   },
   "scripts": {
