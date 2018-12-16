@@ -6,16 +6,22 @@ export const INDEX_QUERY = gql`
     name
     id
   }
-	products(where:{
-    sale:true
-  })
-  {
+	onSale: products(where:{ sale: true }) {
     id
     name
-    description
+    subtitle
     price
     photo {
-      fileName
+      url
+    }
+  }
+  allProducts: products(where:{ sale: null }) {
+    id
+    name
+    subtitle
+    price
+    photo {
+      url
     }
   }
 }
