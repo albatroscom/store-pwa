@@ -12,9 +12,15 @@ app
 
     server.get('/category/:name', (req, res) => {
         const actualPage = "/category";
-        const queryParams = { name: req.params.name }; // /post:title and req.params.title 서로 동일한 값이어야함
+        const queryParams = { name: req.params.name }; // /category:name 과 req.params.name 'name' 파라미터가 서로 동일한 값이어야함
         app.render(req, res, actualPage, queryParams);
     });
+
+    server.get('/product/:id', (req, res) => {
+        const actualPage = "/product";
+        const queryParams = { id: req.params.id }; // 
+        app.render(req, res, actualPage, queryParams);
+    });    
 
     server.get("*", (req, res) => {
         return handle(req, res);

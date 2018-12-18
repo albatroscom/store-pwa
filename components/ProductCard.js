@@ -4,17 +4,17 @@ const { Meta } = Card;
 
 export default ({ id, name, subtitle, photoUrl }) => (
     <div style={{ marginBottom: '25px' }}>
-        <Card 
-            hoverable
-            actions={[
-                <Link href={`/product?id=${id}`} as={`/product/${id}`}>
-                    <a>
+        <Link href={`/product?id=${id}`} as={`/product/${id}`}>
+            <a>
+                <Card
+                    hoverable
+                    actions={[
                         <Icon type='eye' theme='outlined' />
-                    </a>
-                </Link>
-            ]}
-            cover={<img alt={name} src={photoUrl} height={'200px'} />}>
-            <Meta title={name} description={subtitle} />
-        </Card>
+                    ]}
+                    cover={<img alt={name} src={photoUrl} height={'200px'} />}>
+                    <Meta title={name} description={subtitle} />
+                </Card>
+            </a>
+        </Link>
     </div>
 )
