@@ -5,10 +5,10 @@ import { Layout, Row } from 'antd';
 import ProductCard from '../../components/ProductCard';
 const { Content } = Layout;
 
-export default ({ data, category }) => (
+export default ({ data, categoryName }) => (
     <React.Fragment>
         <Head>
-            <title>{category.toUpperCase()} | Nomad Store</title>
+            <title>{categoryName.toUpperCase()} | Nomad Store</title>
         </Head>
         <Header 
             centerColumn={<h4>Nomad Store</h4>}
@@ -38,7 +38,7 @@ export default ({ data, category }) => (
                 ))}
             </div>
             <div style={{ marginTop: '50px' }}>
-                {data && data.allProducts && data.allProducts.length !== 0 && <h2>{category.toUpperCase()}</h2>}
+                {data && data.allProducts && data.allProducts.length !== 0 && <h2>{categoryName.toUpperCase()}</h2>}
                 <div 
                     style={{
                         display: 'grid',

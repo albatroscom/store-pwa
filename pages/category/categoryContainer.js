@@ -15,7 +15,7 @@ class CategoryContainer extends React.Component {
         return (
             <Query query={CATEGORY_QUERY} variables={{ name }}>
             {({ data }) => (
-                <CategoryPresenter data={data} category={name} />
+                <CategoryPresenter data={data} categoryName={name} />
             )}
             </Query>
         )
