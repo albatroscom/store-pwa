@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Header from '../../components/Header';
 import Button from '../../components/Button';
 import { Button as AntButton } from 'antd';
+import CartButton from '../../components/CartButton';
 
 export default ({ data, toggleCart }) => (
     <React.Fragment>
@@ -10,7 +11,7 @@ export default ({ data, toggleCart }) => (
         </Head>
         <Header 
             centerColumn={<h4>Product</h4>}
-            rightColumn={ <Button href="/cart" text="Cart" /> }
+            rightColumn={ <CartButton href="/cart" text="Cart" /> }
             leftColumn={ <Button href="/" text="Home" /> } 
         />
         <div className={"product"}>
