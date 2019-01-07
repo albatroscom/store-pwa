@@ -11,7 +11,7 @@ export default ({ id, name, subtitle, photoUrl }) => (
                     actions={[
                         <Icon type='eye' theme='outlined' />
                     ]}
-                    cover={<img alt={name} src={photoUrl} height={'200px'} />}>
+                    cover={<img alt={name} src={photoUrl} />}>
                     <Meta title={name} description={subtitle} />
                 </Card>
             </a>

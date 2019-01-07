@@ -8,12 +8,15 @@ export default class MyDocument extends Document {
     }
     render() {
         return (
-            <html>
+            <html lang="en">
                 <Head>
                     <title>Nomad Store</title>
                     <meta name="author" content={"tayor baek"} />
-                    <link href="//cdnjs.cloudflare.com/ajax/libs/antd/3.8.1/antd.min.css" rel="stylesheet" />
+                    <meta name="description" content={"Nomad Store"} />
+                    <link href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.8.1/antd.min.css" rel="stylesheet" />
                     <style>{`body { background-color: #EFF2F5!important }`}</style>
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    <meta name="theme-color" content="black" />
                 </Head>
                 <body>
                     <Main />
