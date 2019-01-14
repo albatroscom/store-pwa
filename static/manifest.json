@@ -5,5 +5,22 @@
     "theme_color": "#000",
     "display": "standalone",
     "start_url": "/",
-    "portrait": "portrait"
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/static/128x128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "/static/192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/static/512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
 }
