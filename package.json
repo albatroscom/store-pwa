@@ -20,8 +20,8 @@
     "react-dom": "^16.6.3"
   },
   "scripts": {
-    "dev": "node server.js",
+    "dev": "node server",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server"
   }
 }

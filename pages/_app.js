@@ -24,6 +24,10 @@ class Myapp extends App {
             .then(result => console.log("SW Registered : ", result))
             .catch(error => console.log("Can't register SW : ", error));
         }
+
+        if ("PushManager" in window) {
+            Notification.requestPermission();
+        }
     }
 
     render() {
