@@ -24,14 +24,24 @@ class Myapp extends App {
             .register("/sw.js")
             .then(swReg => {
                 console.log("SW Registered : ", swReg);
-                Notification.requestPermission().then(permission => {
-                    if(permission === "granted"){
-                        swReg.pushManager.subscribe({
-                            userVisibleOnly: true,
-                            applicationServerKey: convertDataURIToBinary('BPxQhQfNiQYUveQoX_V3o0eMKXu4B8oah3hG2Q7OVBsNo06istVZol3L6JEFcPSNtcgfVmWf4MVh1vJ2jDrOHxk')
-                        }).then(PushSubscriptionOptions => {
-                            console.log(PushSubscriptionOptions);
-                        });
+                swReg.pushManager.getSubscription().then(subscription => {
+                    if(subscription === null) {
+                        Notification.requestPermission().then(permission => {
+                            if (permission === "granted") {
+                              swReg.pushManager
+                                .subscribe({
+                                  userVisibleOnly: true,
+                                  applicationServerKey: convertDataURIToBinary(
+                                    "BPxQhQfNiQYUveQoX_V3o0eMKXu4B8oah3hG2Q7OVBsNo06istVZol3L6JEFcPSNtcgfVmWf4MVh1vJ2jDrOHxk"
+                                  )
+                                })
+                                .then(pushSubscriptionObject => {
+                                  console.log(pushSubscriptionObject);
+                                });
+                            }
+                        });                        
+                    } else {
+                        console.log(subscription);
                     }
                 });
             })
